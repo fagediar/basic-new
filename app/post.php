@@ -18,8 +18,8 @@ class post extends Model
     public function sluggable(): array
     {
         return [
-            'slug' => [
-                'source' => 'title',
+                'slug'     => [
+                'source'   => 'title',
                 'onUpdate' => true
             ]
         ];
@@ -29,6 +29,12 @@ class post extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function getGetExcerptAttribute()
+    {
+    return substr($this->body, 0, 140);
+    }
+   
 }
 
 
