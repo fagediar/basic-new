@@ -21,7 +21,7 @@
                         </div>
                         <div class="form-group">
                             <label>Image</label>
-                            <input type="file" name="file" class="form-control" required value="{{  old ('image', $post->image) }}">
+                            <input type="file" name="file" class="form-control"  value="{{  old ('image', $post->image) }}">
                         </div>
                         <div class="form-group">
                             <label>Contenido *</label>
